@@ -1,5 +1,7 @@
 # ToyBot Scenegraph
 
+[![Join the chat at https://gitter.im/shoebot/toybot-scenegraph](https://badges.gitter.im/shoebot/toybot-scenegraph.svg)](https://gitter.im/shoebot/toybot-scenegraph?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 This repository is the testing ground for the Shoebot 2 scene graph implementation.
 
 ## Scene graph specification

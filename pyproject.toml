@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "toybot-scenegraph"
+version = "0.1.0"
+description = ""
+authors = ["Stuart Axon <stuaxo2@yahoo.com>", "Ricardo Lafuente <ricardo@manufacturaindependente.org>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.6"
+
+[tool.poetry.dev-dependencies]
+pytest = "pytest"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"

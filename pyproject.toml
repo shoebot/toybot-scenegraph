@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "toybot-scenegraph"
+name = "toybot"
 version = "0.1.0"
 description = ""
 authors = ["Stuart Axon <stuaxo2@yahoo.com>", "Ricardo Lafuente <ricardo@manufacturaindependente.org>"]
@@ -9,7 +9,13 @@ readme = "README.md"
 python = "^3.6"
 
 [tool.poetry.dev-dependencies]
-pytest = "pytest"
+black = "18.9b"
+pytest = "^4.6"
+Sphinx = "^2.1"
+commonmark = "^0.9.0"
+recommonmark = "^0.5.0"
+flake8 = "^3.7"
+isort = "^4.3"
 
 [build-system]
 requires = ["poetry>=0.12"]

@@ -1,6 +1,6 @@
 import inspect
 
-from ..languages.toybot_lang import ToyBot
+from ..languages.toybot import ToyBot
 from ..renderer.console import ConsoleRenderer
 from ..scenegraph.scenegraph import SceneGraph
 

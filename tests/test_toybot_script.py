@@ -1,6 +1,6 @@
 from textwrap import dedent
 
-from toybot.languages.helpers import run
+from toybot.run.scripting import run
 
 
 def test_toybot_script(capsys):

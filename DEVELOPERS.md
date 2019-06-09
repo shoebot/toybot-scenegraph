@@ -1,8 +1,37 @@
-Stub doc
---------
+Project setup
+=============
+
+This project uses Poetry for dependency management:
+
+Install Poetry:
+```sh
+$ curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python
+```
+
+Create a venv:
+```sh
+$ python3 -mvenv toybot-env
+```
+
+Activate the venv
+```sh
+$ source toybot-env/bin/activate
+```
+
+Install dependencies using Poetry
+```sh
+$ poetry up
+```
+
+Install toybot
+
+```sh
+$ poetry install
+```
+
 
 IDE Setup
----------
+=========
 
 .editorconfig is provided.
 
@@ -15,21 +44,38 @@ to run the following tools on save:
 
 
 Formatting
-----------
+==========
 
 Black
+
+[Black](https://black.readthedocs.io/en/stable/) is used for formatting.
+
+Editors can usually be setup to run it on save.
+
+Our pre-commit hook can be used to check formatting is consistent.
 
 
 Linting
 -------
 
-Flake8
+Flake8 is used to find common errors.
+Line width is set to 88 characters for compatiblity with Black.
+
+
+pre-commit hook 
 
 
 Testing
--------
+=
 
-pytest
+Testing uses pytest
+=
+
+Run tests:
+
+```sh
+$ pytest 
+```
 
 Tests adhere to AAA
 
@@ -37,9 +83,18 @@ Tests adhere to AAA
 - Act
 - Assert
 
+Test Coverage
+=
+
+[pytest-cov](https://pytest-cov.readthedocs.io) is used to check test coverage:
+
+```sh
+$ pytest --cov=toybot tests
+```
+
 
 Docs
-----
+=
 
 Sphinx
 

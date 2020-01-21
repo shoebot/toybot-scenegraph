@@ -6,6 +6,10 @@ from ..scenegraph.scenegraph import SceneGraph
 
 
 def create_scripting_namespace(bot):
+    """
+    :param bot: All attributes of bot will be added to a dictionary.
+    :return: Dictionary containing bot namespace.
+    """
     namespace = {}
     for name, method in inspect.getmembers(bot, predicate=inspect.ismethod):
         if name.startswith("__"):
@@ -15,6 +19,9 @@ def create_scripting_namespace(bot):
 
 
 def run(source):
+    """
+    :param source: Bot source to execute.
+    """
     graph = SceneGraph()
     renderer = ConsoleRenderer()
 

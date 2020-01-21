@@ -4,6 +4,8 @@
 
 This repository is the testing ground for the Shoebot 2 scene graph implementation.
 
+Developer info: [DEVELOPERS.md](./DEVELOPERS.md)
+
 ## Scene graph specification
 
 A scene graph is a simple collection of nodes, which can be

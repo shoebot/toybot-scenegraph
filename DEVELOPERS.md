@@ -20,13 +20,13 @@ $ source toybot-env/bin/activate
 
 Install dependencies using Poetry
 ```sh
-$ poetry up
+$ poetry install
 ```
 
-Install toybot
+To update dependencies
 
 ```sh
-$ poetry install
+$ poetry update
 ```
 
 

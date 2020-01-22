@@ -17,7 +17,7 @@ A scene graph is a simple collection of nodes, which can be
 
 ```json
 {
-  "type": "path"
+  "type": "path",
   "coords": [
     [0, 0],
     [0, 100],

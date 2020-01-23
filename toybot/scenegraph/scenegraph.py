@@ -6,8 +6,6 @@ class SceneGraph:
         self.nodes.append(node)
 
     def __iter__(self):
+        """Iterator that yields every node in the graph
         """
-        Iterator that yields every node in the graph
-        """
-        for node in self.nodes:
-            yield node
+        yield from self.nodes.__iter__()

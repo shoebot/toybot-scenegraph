@@ -1,3 +1,4 @@
+import json
 from textwrap import dedent
 
 from toybot.run.scripting import run
@@ -13,14 +14,13 @@ def test_toybot_script(capsys):
         rect(25, 30, 50, 70)
         """
     )
-    expected = dedent(
-        """\
-        {'type': 'path', 'coords': [(0, 0), (0, 100), (100, 100), (100, 0)]}
-        {'type': 'path', 'coords': [(25, 30), (25, 100), (75, 100), (75, 30)]}
-        """
-    )
+    expected = [
+        {"type": "path", "coords": [[0, 0], [0, 100], [100, 100], [100, 0]]},
+        {"type": "path", "coords": [[25, 30], [25, 100], [75, 100], [75, 30]]},
+    ]
 
     run(code)
     captured = capsys.readouterr()
+    data = json.loads(captured.out)
 
-    assert captured.out == expected
+    assert data == expected

@@ -7,7 +7,7 @@ application-import-names = toybot,tests
 import-order-style = google
 per-file-ignores = 
     tests/*:S101,TYP
-    noxfile.py:TYP
+    noxfile.py:TYP,D103
 exclude =
     .git,
     .nox,

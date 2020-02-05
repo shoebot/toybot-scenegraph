@@ -1,12 +1,16 @@
+"""Script execution and support."""
 import inspect
+from typing import Any, Dict
 
-from ..languages.toybot import ToyBot
-from ..renderer.console import ConsoleRenderer
-from ..scenegraph.scenegraph import SceneGraph
+from toybot.languages import ToyBot
+from toybot.renderer import ConsoleRenderer
+from toybot.scenegraph import SceneGraph
 
 
-def create_scripting_namespace(bot):
+def create_scripting_namespace(bot: ToyBot) -> Dict[str, Any]:
     """
+    Populate namespace in which to run the bot.
+
     :param bot: All attributes of bot will be added to a dictionary.
     :return: Dictionary containing bot namespace.
     """
@@ -18,8 +22,11 @@ def create_scripting_namespace(bot):
     return namespace
 
 
-def run(source):
+def run(source: str) -> None:
     """
+    Run bot source.
+
+    Takes source, sets up Bot infrastructure and runs it.
     :param source: Bot source to execute.
     """
     graph = SceneGraph()
@@ -28,6 +35,6 @@ def run(source):
     bot = ToyBot(graph)
     namespace = create_scripting_namespace(bot)
 
-    exec(source, namespace)
+    exec(source, namespace)  # noqa
 
     renderer.render(graph)

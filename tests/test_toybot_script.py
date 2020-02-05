@@ -1,13 +1,12 @@
+"""Test toybot.scripting module."""
 import json
 from textwrap import dedent
 
 from toybot.run.scripting import run
 
 
-def test_toybot_script(capsys):
-    """
-    Small end to end test using the ConsoleRender to confirm commands get rendered.
-    """
+def test_toybot_script(capsys) -> None:
+    """Render to the ConsoleRender to confirm commands are output as expected."""
     code = dedent(
         """\
         rect(0, 0, 100, 100)

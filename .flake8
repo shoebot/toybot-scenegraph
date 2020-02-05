@@ -1,0 +1,18 @@
+[flake8]
+select = B,B9,BLK,C,D,DAR,E,F,I,S,TYP,W
+ignore = E203,E501,W503,TYP101
+max-line-length = 88
+max-complexity = 10
+application-import-names = toybot,tests
+import-order-style = google
+per-file-ignores = 
+    tests/*:S101,TYP
+    noxfile.py:TYP
+exclude =
+    .git,
+    .nox,
+    notebooks,  # TODO re-enable notebook checking
+    notebooks/.ipynb_checkpoints,
+    __pycache__,
+    build,
+    dist
